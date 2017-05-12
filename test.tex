@@ -1,10 +1,12 @@
 \documentclass{article}
-\usepackage[defaultfam,tabular,lining]{montserrat} 
+\usepackage[defaultfam,tabular,lining]{montserrat}
+\usepackage[default]{lato}
 \usepackage[T1]{fontenc}
 \usepackage{sectsty}
 \usepackage[HTML]{xcolor}
-\allsectionsfont{\color[HTML]{008080}}
-\renewcommand*\oldstylenums[1]{{\fontfamily{Montserrat-TOsF}\selectfont #1}}
+\usepackage{textcase}
+\allsectionsfont{\color[HTML]{008080}\fontfamily{Montserrat-TOsF}\selectfont\MakeTextUppercase}
+%\renewcommand*\oldstylenums[1]{{\fontfamily{Montserrat-TOsF}\selectfont #1}}
 \begin{document}
 
 \title{Curriculum Vitae}
