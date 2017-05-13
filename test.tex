@@ -1,16 +1,33 @@
 \documentclass{article}
-\usepackage[defaultfam,tabular,lining]{montserrat} 
+\usepackage[defaultfam,tabular,lining]{montserrat}
+\usepackage[default]{lato}
 \usepackage[T1]{fontenc}
 \usepackage{sectsty}
 \usepackage[HTML]{xcolor}
-\allsectionsfont{\color[HTML]{008080}}
-\renewcommand*\oldstylenums[1]{{\fontfamily{Montserrat-TOsF}\selectfont #1}}
+\usepackage{textcase}
+\usepackage{multicol}
+\usepackage{wrapfig}
+\usepackage{graphicx}
+\graphicspath{ {img/} }
+\usepackage[a4paper, portrait, margin=1in]{geometry}
+\allsectionsfont{\color[HTML]{008080}\fontfamily{Montserrat-TOsF}\selectfont\MakeTextUppercase}
+%\renewcommand*\oldstylenums[1]{{\fontfamily{Montserrat-TOsF}\selectfont #1}}
 \begin{document}
 
 \title{Curriculum Vitae}
 \author{Simon Fish}
 
-\maketitle
+%\maketitle
+\begin{wrapfigure}{r}{0.25\textwidth}
+			           \centering
+				       \includegraphics[width=0.25\textwidth]{profile}
+		       \end{wrapfigure}
+
+   \begin{center}
+	         \color[HTML]{008080}\fontfamily{Montserrat-TOsF}\selectfont\MakeTextUppercase\Large\textbf{SIMON FISH}\\
+		       \small\textit{simon.fish | si@mon.fish | 07852 406718 | 42 Tolethorpe Close, Oakham, Rutland LE15 6GF}
+		       		       %\includegraphics[width=3cm]{profile}
+		          \end{center}
 
 \section*{Profile}
 A diligent and efficient worker who is always willing to learn. I enjoy using logic to
@@ -24,6 +41,8 @@ positive outlook.
 \subsection*{University of Sheffield | 2016-present}
 \subsubsection*{Computer Science with a Year in Industry, BSc}
 \paragraph{First Year}
+My first year consists of the following modules:
+\begin{multicols}{2}
 \begin{itemize}
   \item Intro to Software Engineering
   \item Foundations of Computer Science
@@ -33,10 +52,12 @@ positive outlook.
   \item Web \& Internet Technology
   \item Algorithms \& Data Structures
 \end{itemize}
+\end{multicols}
 \paragraph{Other Experience}
 \begin{itemize}
 	\item Programming Languages
-		\begin{itemize}
+	\begin{multicols}{2}
+	\begin{itemize}
 	\item Python
 	\item Ruby
 	\item Java
@@ -47,8 +68,9 @@ positive outlook.
 	\item JavaScript
 	\item jQuery
 	\item Bootstrap
-		\end{itemize}
-\end{itemize}
+	\end{itemize}
+	\end{multicols}
+	\end{itemize}
 \begin{itemize}
 	\item Operating Systems 
 		\begin{itemize}
