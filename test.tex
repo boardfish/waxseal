@@ -8,12 +8,28 @@
 \usepackage{multicol}
 \usepackage{wrapfig}
 \usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{calc} 
 \graphicspath{ {img/} }
 \usepackage[a4paper, portrait, margin=1in]{geometry}
 \allsectionsfont{\color[HTML]{008080}\fontfamily{Montserrat-TOsF}\selectfont\MakeTextUppercase}
 %\renewcommand*\oldstylenums[1]{{\fontfamily{Montserrat-TOsF}\selectfont #1}}
-\begin{document}
 
+\usepackage{everypage}
+\usepackage{tikzpagenodes}
+\usetikzlibrary{calc}
+
+\pagestyle{empty}
+
+\AddEverypageHook{\begin{tikzpicture}[remember picture,overlay]
+		\fill[blue!50!green] (current page.north west) rectangle (current page text area.north -| current page.east);
+		\node[color=white] at (current page header area) {\color[HTML]{ffffff}\fontfamily{Montserrat-TOsF}\selectfont\MakeTextUppercase\Huge\textbf{SIMON FISH}\\};
+		\fill[blue!50!green] (current page.south west) rectangle (current page footer area.north -| current page.east);
+		\node[color=white,yshift=-0.75cm] at (current page footer area) {\small\textit{simon.fish | si@mon.fish | 07852 406718 | 42 Tolethorpe Close, Oakham, Rutland LE15 6GF}};	
+\end{tikzpicture}
+}
+
+\begin{document}
 \title{Curriculum Vitae}
 \author{Simon Fish}
 
@@ -24,8 +40,6 @@
 \end{wrapfigure}
 
 \begin{center}
-	\color[HTML]{008080}\fontfamily{Montserrat-TOsF}\selectfont\MakeTextUppercase\Large\textbf{SIMON FISH}\\
-	\small\textit{simon.fish | si@mon.fish | 07852 406718 | 42 Tolethorpe Close, Oakham, Rutland LE15 6GF}
 	%\includegraphics[width=3cm]{profile}
 \end{center}
 
