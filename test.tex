@@ -11,21 +11,18 @@
 \usepackage{tikz}
 \usetikzlibrary{calc} 
 \graphicspath{ {img/} }
-\usepackage[a4paper, portrait, margin=1in]{geometry}
+\usepackage[a4paper, portrait, margin=1in, headheight=24pt]{geometry}
 \allsectionsfont{\color[HTML]{008080}\fontfamily{Montserrat-TOsF}\selectfont\MakeTextUppercase}
-%\renewcommand*\oldstylenums[1]{{\fontfamily{Montserrat-TOsF}\selectfont #1}}
-
 \usepackage{everypage}
 \usepackage{tikzpagenodes}
 \usetikzlibrary{calc}
-
 \pagestyle{empty}
-
+\addtolength{\footskip}{0.6cm}
 \AddEverypageHook{\begin{tikzpicture}[remember picture,overlay]
-		\fill[blue!50!green] (current page.north west) rectangle (current page text area.north -| current page.east);
-		\node[color=white] at (current page header area) {\color[HTML]{ffffff}\fontfamily{Montserrat-TOsF}\selectfont\MakeTextUppercase\Huge\textbf{SIMON FISH}\\};
+		\fill[blue!50!green] (current page.north west) rectangle (current page header area.south -| current page.east);
+		\node[color=white,yshift=0.4cm] at (current page header area) {\color[HTML]{ffffff}\fontfamily{Montserrat-TOsF}\selectfont\MakeTextUppercase\Huge\textbf{SIMON FISH}\\};
 		\fill[blue!50!green] (current page.south west) rectangle (current page footer area.north -| current page.east);
-		\node[color=white,yshift=-0.75cm] at (current page footer area) {\small\textit{simon.fish | si@mon.fish | 07852 406718 | 42 Tolethorpe Close, Oakham, Rutland LE15 6GF}};	
+		\node[color=white,yshift=-0.45cm] at (current page footer area) {\small\textit{simon.fish | si@mon.fish | 07852 406718 | 42 Tolethorpe Close, Oakham, Rutland LE15 6GF}};	
 \end{tikzpicture}
 }
 
@@ -38,10 +35,6 @@
 	\centering
 	\includegraphics[width=0.25\textwidth]{profile}
 \end{wrapfigure}
-
-\begin{center}
-	%\includegraphics[width=3cm]{profile}
-\end{center}
 
 \section*{Profile}
 A diligent and efficient worker who is always willing to learn. I enjoy using logic to
