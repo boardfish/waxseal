@@ -41,13 +41,13 @@
 }
 
 %variables
-\def \recipname {John Doe}
-\def \recipgreeting {Dear Mr. Doe}
-\def \recipaddresslineone {Address Line 1}
-\def \recipaddresslinetwo {Address Line 2}
-\def \reciptown {The Middle}
-\def \recipcounty {Nowhere}
-\def \recippostcode {XX00 X00}
+\def \recipname {}
+\def \recipgreeting {}
+\def \recipaddresslineone {}
+\def \recipaddresslinetwo {}
+\def \reciptown {}
+\def \recipcounty {}
+\def \recippostcode {}
 
 \begin{document}
 \setlength{\parindent}{0em}
@@ -68,6 +68,7 @@
 
 \recipgreeting,
 \setlength{\parindent}{2em}
+\setlength{\parskip}{0.5cm plus4mm minus3mm}
 \bigskip
 
 % Write the body of the letter
@@ -75,11 +76,12 @@
 % End body
 \bigskip
 
-Sincerely,
+Yours sincerely,
 
-\vspace{4\baselineskip}
+\vspace{2\baselineskip}
 
 Simon Fish
 
+P.S. 
 
 \end{document}
