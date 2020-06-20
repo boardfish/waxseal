@@ -26,22 +26,6 @@
 \usepackage[letterspace=150]{microtype}
 
 %variables
-\def \recipforename {John}
-\def \recipsurname {Doe}
-\edef \recipname {\recipforename{ }\recipsurname}
-\def \recipgreeting {Dear \recipforename}
-\def \recipsignoff {Yours sincerely}
-\def \recipaddresslineone {Test}
-\def \recipaddresslinetwo {Test}
-\def \reciptown {Test}
-\def \recipcounty {Test}
-\def \recippostcode {Test}
-\def \recipaddress{
-  \recipaddresslineone \\
-  \recipaddresslinetwo \\
-  \reciptown, \recipcounty \\
-  \recippostcode
-}
 \definecolor{primary}{HTML}{006699}
 
 \usetikzlibrary{calc}
@@ -68,15 +52,18 @@
 	LE15 6GF\\
 \end{flushright}
 
-\recipname \\
-\recipaddress
+$if(forename)$
+  $forename$ $surname$ \\
+$endif$
+
+$address$
 
 \bigskip
 
 \today
 \bigskip
 
-\recipgreeting,
+$greeting$,
 \setlength{\parindent}{2em}
 \setlength{\parskip}{0.5cm plus4mm minus3mm}
 \bigskip
@@ -86,7 +73,7 @@
 % End body
 \bigskip
 
-\recipsignoff,
+$signoff$,
 
 \vspace{2\baselineskip}
 
