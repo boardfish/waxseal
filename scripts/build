@@ -14,4 +14,5 @@ else
   RECIP_SIGNOFF="Yours sincerely"
 fi
 
-pandoc --variable=address:"$ADDRESS" -M forename="$RECIP_FORENAME" -M surname="$RECIP_SURNAME" -M greeting="$RECIP_GREETING" -M signoff="$RECIP_SIGNOFF" "$1" --template=test.tex -o "$1.pdf"
+docker build -t pandoc .
+docker run --rm --volume "`pwd`:/data" --user `id -u`:`id -g` pandoc --variable=address:"$ADDRESS" -M forename="$RECIP_FORENAME" -M surname="$RECIP_SURNAME" -M greeting="$RECIP_GREETING" -M signoff="$RECIP_SIGNOFF" "$1" --template=test.tex -o "$1.pdf"
