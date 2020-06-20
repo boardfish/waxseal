@@ -31,4 +31,5 @@ runs:
     - --variable=signoff:${{ inputs.signoff }}
     - ${{ inputs.filename }}
     - --template=test.tex
-    - -o out/${{ inputs.filename }}.pdf
+    - -o
+    - out/${{ inputs.filename }}.pdf
