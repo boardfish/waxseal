@@ -19,12 +19,12 @@ EOF
 }
 
 
-echo "Hello world"
 if [ "${1#-}" != "${1}" ] || [ -z "$(command -v "${1}")" ]; then
     set -- pandoc "$@"
 fi
 
 "$@"
+ls out
 
 _git_setup
 echo "Committing and pushing changes..."
