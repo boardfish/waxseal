@@ -5,8 +5,30 @@ inputs:
   filename:  # id of input
     description: 'Name of file'
     required: true
+  address:  # id of input
+    description: 'Address of recipient'
+    required: false
+  forename:  # id of input
+    description: 'Forename of recipient'
+    required: false
+  surname:  # id of input
+    description: 'Surname of recipient'
+    required: false
+  greeting:  # id of input
+    description: 'Greeting'
+    required: false
+  signoff:  # id of input
+    description: 'Signoff'
+    required: false
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
+    - --variable=address:${{ inputs.address }}
+    - --variable=forename:${{ inputs.forename }}
+    - --variable=surname:${{ inputs.surname }}
+    - --variable=greeting:${{ inputs.greeting }}
+    - --variable=signoff:${{ inputs.signoff }}
     - ${{ inputs.filename }}
+    - --template=test.tex
+    - -o out/${{ inputs.filename }}.pdf

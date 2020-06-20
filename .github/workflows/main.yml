@@ -18,3 +18,8 @@ jobs:
         id: hello
         with:
           filename: 'foo.md'
+          address: ''
+          forename: ''
+          surname: ''
+          greeting: 'To whom it may concern'
+          signoff: 'Yours faithfully'
