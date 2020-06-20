@@ -1,0 +1,12 @@
+# action.yml
+name: 'Compile TeX Document'
+description: 'Compiles a TeX document.'
+inputs:
+  filename:  # id of input
+    description: 'Name of file'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.filename }}
