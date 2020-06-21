@@ -75,7 +75,7 @@ while test $# -gt 0; do
 done
 
 mkdir -p $OUTPUT_DIRECTORY
-find $INPUT_DIRECTORY -type f -name '*.md' -print0 | xargs -n1 basename | xargs echo -n | xargs -0 -n1 -P2 -I{} pandoc "$INPUT_DIRECTORY/{}" --template="$TEMPLATE_FILE" -o "$OUTPUT_DIRECTORY/{}.pdf"
+find $INPUT_DIRECTORY -type f -name '*.md' -print0 | xargs -0 -n1 basename | xargs -P2 -I{} pandoc "$INPUT_DIRECTORY/{}" --template="$TEMPLATE_FILE" -o "$OUTPUT_DIRECTORY/{}.pdf"
 
 _git_setup
 echo "Committing and pushing changes..."
