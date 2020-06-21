@@ -1,6 +1,6 @@
 ---
-forename: Blah
-surname: Blah
+forename: Joe
+surname: Bloggs
 address: |
   Address Line 1   
   Address Line 2   
@@ -12,8 +12,10 @@ senderaddress: |
   Address Line 2   
   Address Line 3   
   Postcode
-greeting: Dear Blah
+greeting: Dear Joe
 signoff: Yours sincerely
 ---
 
-fjhsajfhasjk
+This message was brought to you by letter-template!
+
+Hope you enjoy.

@@ -4,4 +4,4 @@ docker run --rm \
   --volume "`pwd`:/data" \
   --user `id -u`:`id -g` \
   pandoc \
-  "$1" --template=test.tex -o "out/$1.pdf"
+  "$@"
