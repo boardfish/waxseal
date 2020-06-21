@@ -16,6 +16,6 @@ greeting: Dear John
 signoff: Yours sincerely
 ---
 
-This message was brought to you by letter-template!
+This message was brought to you by waxseal!
 
 Hope you enjoy.
