@@ -12,7 +12,6 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.filename }}
-    - --template=${{ inputs.template }}
-    - -o
-    - out/${{ inputs.filename }}.pdf
+    - --input-dir=${{ inputs.input_directory }}
+    - --template=${{ inputs.template_file }}
+    - --output-dir=${{ inputs.output_directory }}
