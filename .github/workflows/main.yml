@@ -18,6 +18,7 @@ jobs:
         id: hello
         with:
           filename: 'foo.md'
+          template: 'test.tex'
           address: ''
           forename: ''
           surname: ''
