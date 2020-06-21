@@ -8,30 +8,10 @@ inputs:
   template:
     description: 'Name of template file'
     required: true
-  address:
-    description: 'Address of recipient'
-    required: false
-  forename:
-    description: 'Forename of recipient'
-    required: false
-  surname:
-    description: 'Surname of recipient'
-    required: false
-  greeting:
-    description: 'Greeting'
-    required: false
-  signoff:
-    description: 'Signoff'
-    required: false
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - --variable=address:${{ inputs.address }}
-    - --variable=forename:${{ inputs.forename }}
-    - --variable=surname:${{ inputs.surname }}
-    - --variable=greeting:${{ inputs.greeting }}
-    - --variable=signoff:${{ inputs.signoff }}
     - ${{ inputs.filename }}
     - --template=${{ inputs.template }}
     - -o

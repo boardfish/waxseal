@@ -19,8 +19,3 @@ jobs:
         with:
           filename: 'foo.md'
           template: 'test.tex'
-          address: ''
-          forename: ''
-          surname: ''
-          greeting: 'To whom it may concern'
-          signoff: 'Yours faithfully'
