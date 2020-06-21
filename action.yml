@@ -1,6 +1,6 @@
 # action.yml
-name: 'Waxseal'
-description: 'Compiles Markdown documents to LaTeX PDFs using a template.'
+name: Waxseal Action
+description: Compiles Markdown documents to LaTeX PDFs using a template.
 author: Simon Fish <si@mon.fish>
 inputs:
   input_directory:
