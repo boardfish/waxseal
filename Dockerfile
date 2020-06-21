@@ -7,7 +7,6 @@ RUN tlmgr install wrapfig
 RUN tlmgr install everypage
 RUN tlmgr install tikzpagenodes
 RUN tlmgr install ifoddpage
-ADD LogoWhite.png /data/LogoWhite.png
 ADD entrypoint.sh /data/entrypoint.sh
 RUN apk add git
 ENTRYPOINT ["/data/entrypoint.sh"]
