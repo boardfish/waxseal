@@ -1,12 +1,16 @@
 # action.yml
-name: 'Compile TeX Document'
-description: 'Compiles a TeX document.'
+name: 'Waxseal'
+description: 'Compiles Markdown documents to LaTeX PDFs using a template.'
+author: Simon Fish <si@mon.fish>
 inputs:
-  filename:
-    description: 'Name of file'
+  input_directory:
+    description: 'Directory to take the input files from'
     required: true
-  template:
+  template_file:
     description: 'Name of template file'
+    required: true
+  output_directory:
+    description: 'Output directory for compiled PDFs'
     required: true
 runs:
   using: 'docker'
@@ -15,3 +19,6 @@ runs:
     - --input-dir=${{ inputs.input_directory }}
     - --template=${{ inputs.template_file }}
     - --output-dir=${{ inputs.output_directory }}
+branding:
+  icon: 'edit'
+  color: 'blue'
