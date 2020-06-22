@@ -26,7 +26,7 @@ jobs:
           # Make sure the actual branch is checked out when running on pull requests
           ref: ${{ github.head_ref }}
       - name: Waxseal it
-        uses: ./
+        uses: boardfish/waxseal@v1.0.1
         id: waxseal
         with:
           input_directory: 'in'     # Takes .md files from ./in...
