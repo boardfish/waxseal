@@ -1,5 +1,5 @@
 FROM pandoc/latex:edge
-RUN tlmgr update --all
+RUN tlmgr update --self --all
 RUN tlmgr install roboto
 RUN tlmgr install fontaxes
 RUN tlmgr install sectsty
