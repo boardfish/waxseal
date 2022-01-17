@@ -7,6 +7,7 @@ RUN tlmgr install wrapfig
 RUN tlmgr install everypage
 RUN tlmgr install tikzpagenodes
 RUN tlmgr install ifoddpage
+RUN tlmgr install textcase
 RUN apk add git
 ADD entrypoint.sh /data/entrypoint.sh
 ENTRYPOINT ["/data/entrypoint.sh"]
